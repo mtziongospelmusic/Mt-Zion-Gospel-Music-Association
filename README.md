@@ -1,1 +1,1 @@
-# Mt-Zion-Gospel-Music-Association
+Mt Zion Gospel Music Association
