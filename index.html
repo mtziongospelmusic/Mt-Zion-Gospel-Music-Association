@@ -38,17 +38,26 @@
             justify-content: space-between;
         }
 
-        .brand {
-            color: #fff;
-            text-decoration: none;
-            font-family: Georgia, serif;
-            font-size: 21px;
-            font-weight: bold;
-        }
+       .brand {
+    color: #fff;
+    text-decoration: none;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-        .brand span {
-            color: #d4af37;
-        }
+.brand img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.brand span {
+    color: #d4af37;
+}
 
         nav a {
             color: #fff;
@@ -280,9 +289,10 @@
 <header>
     <div class="header-inner">
 
-        <a href="index.html" class="brand">
-            Mt Zion <span>Gospel Music Association</span>
-        </a>
+       <a href="index.html" class="brand">
+    <img src="logo.png" alt="Mt Zion Gospel Music Association Logo">
+    <span>Mt Zion Gospel Music Association</span>
+</a>
 
         <nav>
             <a href="index.html">Home</a>
