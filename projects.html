@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects | Mt Zion Gospel Music Association</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #000;
+            border-bottom: 2px solid #d4af37;
+            padding: 15px 5%;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .brand {
+            color: #fff;
+            text-decoration: none;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+
+        .brand span {
+            color: #d4af37;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 48px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 19px;
+            color: #eee;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: Georgia, serif;
+            color: #d4af37;
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #ddd;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #111;
+            border: 1px solid #333;
+            border-top: 4px solid #d4af37;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .project-card h3 {
+            color: #d4af37;
+            font-family: Georgia, serif;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #ddd;
+        }
+
+        .status {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 15px;
+            border: 1px solid #d4af37;
+            border-radius: 5px;
+            color: #d4af37;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .future {
+            margin-top: 45px;
+            padding: 30px;
+            background: #063d20;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .future h3 {
+            color: #d4af37;
+            font-family: Georgia, serif;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 70px 20px;
+            background: #0b0b0b;
+            border-top: 1px solid #222;
+        }
+
+        .cta h2 {
+            font-family: Georgia, serif;
+            color: #d4af37;
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 13px 28px;
+            background: #d4af37;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            background: #000;
+            border-top: 1px solid #333;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+            .header-inner {
+                flex-direction: column;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+
+        <a href="index.html" class="brand">
+            <img src="./logo.png" alt="Mt Zion Gospel Music Association Logo">
+            <span>Mt Zion Gospel Music Association</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="music.html">Music</a>
+            <a href="ministry.html">Ministry</a>
+            <a href="events.html">Events</a>
+            <a href="projects.html">Projects</a>
+            <a href="support.html">Support</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Our Projects</h1>
+
+    <p>
+        Developing gospel music, ministry and community-focused
+        projects that support our vision and mission.
+    </p>
+</section>
+
+<section>
+
+    <h2 class="section-title">Projects & Programs</h2>
+
+    <p class="intro">
+        This page will showcase projects and programs developed
+        by Mt Zion Gospel Music Association. New projects can be
+        added as they are planned, developed and implemented.
+    </p>
+
+    <div class="projects-grid">
+
+        <div class="project-card">
+            <div class="status">Future Project</div>
+
+            <h3>Gospel Music Projects</h3>
+
+            <p>
+                A space for gospel music recordings, productions,
+                songwriting initiatives and other music-related
+                projects.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <div class="status">Future Project</div>
+
+            <h3>Ministry Programs</h3>
+
+            <p>
+                A place to present ministry programs that encourage
+                worship, faith, fellowship and spiritual growth.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <div class="status">Future Project</div>
+
+            <h3>Community Initiatives</h3>
+
+            <p>
+                A space for community-focused initiatives and
+                activities connected with the association's
+                gospel mission.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="future">
+
+        <h3>More Projects Coming</h3>
+
+        <p>
+            As Mt Zion Gospel Music Association grows, this page
+            will be updated with project information, objectives,
+            progress and results.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="cta">
+
+    <h2>Support Gospel Music & Ministry</h2>
+
+    <p>
+        Your support can help create opportunities for gospel
+        music, ministry and future projects.
+    </p>
+
+    <a href="support.html" class="button">Support Our Mission</a>
+
+</section>
+
+<footer>
+    © 2026 Mt Zion Gospel Music Association |
+    Proclaiming the Good News Through Gospel Music
+</footer>
+
+</body>
+</html>
