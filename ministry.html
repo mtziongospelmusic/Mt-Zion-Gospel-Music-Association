@@ -1,1 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Ministry | Mt Zion Gospel Music Association</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #000;
+            border-bottom: 2px solid #d4af37;
+            padding: 15px 5%;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .brand {
+            color: #fff;
+            text-decoration: none;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .brand span {
+            color: #d4af37;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            color: #d4af37;
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            color: #ddd;
+            font-size: 19px;
+        }
+
+        section {
+            max-width: 1050px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: Georgia, serif;
+            color: #d4af37;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 45px;
+            color: #ccc;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #111;
+            border: 1px solid #333;
+            border-top: 5px solid #d4af37;
+            border-radius: 10px;
+            padding: 30px 25px;
+            text-align: center;
+        }
+
+        .card h3 {
+            font-family: Georgia, serif;
+            color: #d4af37;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #ccc;
+        }
+
+        .highlight {
+            background: #063d20;
+            max-width: none;
+            text-align: center;
+        }
+
+        .highlight p {
+            max-width: 800px;
+            margin: auto;
+            color: #eee;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 28px;
+            background: #d4af37;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 15px;
+            background: #000;
+            border-top: 1px solid #333;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: #d4af37;
+        }
+
+        @media (max-width: 850px) {
+
+            .header-inner {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="header-inner">
+
+        <a href="index.html" class="brand">
+
+            <img src="./logo.png"
+                 alt="Mt Zion Gospel Music Association Logo">
+
+            <span>Mt Zion Gospel Music Association</span>
+
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="music.html">Music</a>
+            <a href="ministry.html">Ministry</a>
+            <a href="events.html">Events</a>
+            <a href="projects.html">Projects</a>
+            <a href="support.html">Support</a>
+            <a href="social.html">Connect</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>Ministry</h1>
+
+    <p>
+        Serving through gospel music, faith, fellowship
+        and opportunities to encourage our communities.
+    </p>
+
+</section>
+
+
+<section>
+
+    <h2 class="section-title">
+        Our Ministry
+    </h2>
+
+    <p class="intro">
+        Mt Zion Gospel Music Association seeks to use gospel
+        music as a way of sharing the Good News, encouraging
+        people and strengthening fellowship.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Gospel Music</h3>
+
+            <p>
+                Encouraging the sharing and development of
+                gospel music that communicates faith and hope.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Worship & Fellowship</h3>
+
+            <p>
+                Creating opportunities for people to come
+                together through music, worship and fellowship.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Community</h3>
+
+            <p>
+                Supporting positive community connections
+                through gospel music and ministry activities.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="highlight">
+
+    <h2 class="section-title">
+        Proclaiming the Good News
+    </h2>
+
+    <p>
+        Through gospel music and ministry, Mt Zion Gospel Music
+        Association seeks to encourage faith, hope, fellowship
+        and service.
+    </p>
+
+    <a href="music.html" class="button">
+        Explore Our Music
+    </a>
+
+</section>
+
+
+<section>
+
+    <h2 class="section-title">
+        Connect With Us
+    </h2>
+
+    <p class="intro">
+        We welcome your prayers, encouragement, fellowship
+        and enquiries as the association continues its journey.
+    </p>
+
+    <div style="text-align:center;">
+
+        <a href="social.html" class="button">
+            Connect With Mt Zion
+        </a>
+
+        <a href="contact.html" class="button">
+            Contact Us
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        <strong>Mt Zion Gospel Music Association</strong>
+    </p>
+
+    <p>
+        Proclaiming the Good News Through Gospel Music
+    </p>
+
+    <p>
+        © 2026 Mt Zion Gospel Music Association
+    </p>
+
+</footer>
+
+</body>
+</html>
