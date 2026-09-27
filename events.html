@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Events | Mt Zion Gospel Music Association</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #000;
+            border-bottom: 2px solid #d4af37;
+            padding: 15px 5%;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .brand {
+            color: #fff;
+            text-decoration: none;
+            font-family: Georgia, serif;
+            font-size: 21px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+        }
+
+        .brand span {
+            color: #d4af37;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 48px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 19px;
+            color: #eee;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: Georgia, serif;
+            color: #d4af37;
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: #ddd;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .event-card {
+            background: #111;
+            border: 1px solid #333;
+            border-top: 4px solid #d4af37;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .event-card h3 {
+            color: #d4af37;
+            font-family: Georgia, serif;
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .event-card p {
+            color: #ddd;
+        }
+
+        .date-box {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 18px;
+            border: 1px solid #d4af37;
+            border-radius: 5px;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        .notice {
+            margin-top: 40px;
+            padding: 25px;
+            text-align: center;
+            background: #063d20;
+            border-radius: 10px;
+        }
+
+        .notice strong {
+            color: #d4af37;
+        }
+
+        .cta {
+            text-align: center;
+            padding: 70px 20px;
+            background: #0b0b0b;
+            border-top: 1px solid #222;
+        }
+
+        .cta h2 {
+            font-family: Georgia, serif;
+            color: #d4af37;
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 13px 28px;
+            background: #d4af37;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 15px;
+            background: #000;
+            border-top: 1px solid #333;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+            .header-inner {
+                flex-direction: column;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+
+        <a href="index.html" class="brand">
+            <img src="./logo.png" alt="Mt Zion Gospel Music Association Logo">
+            <span>Mt Zion Gospel Music Association</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="music.html">Music</a>
+            <a href="ministry.html">Ministry</a>
+            <a href="events.html">Events</a>
+            <a href="projects.html">Projects</a>
+            <a href="support.html">Support</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Events & Gatherings</h1>
+
+    <p>
+        Creating opportunities for worship, fellowship,
+        gospel music and community connection.
+    </p>
+</section>
+
+<section>
+
+    <h2 class="section-title">Our Events</h2>
+
+    <p class="intro">
+        This page will feature upcoming gospel music events,
+        worship gatherings, concerts, outreach activities and
+        other programs connected with Mt Zion Gospel Music Association.
+    </p>
+
+    <div class="events-grid">
+
+        <div class="event-card">
+            <div class="date-box">Coming Soon</div>
+
+            <h3>Gospel Music Events</h3>
+
+            <p>
+                Information about upcoming gospel music
+                performances, concerts and music gatherings
+                will be published here.
+            </p>
+        </div>
+
+        <div class="event-card">
+            <div class="date-box">Coming Soon</div>
+
+            <h3>Worship Gatherings</h3>
+
+            <p>
+                Future worship and fellowship gatherings
+                will be announced here with relevant
+                dates and details.
+            </p>
+        </div>
+
+        <div class="event-card">
+            <div class="date-box">Coming Soon</div>
+
+            <h3>Community Outreach</h3>
+
+            <p>
+                Information about gospel outreach and
+                community-focused activities will be
+                shared here.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="notice">
+        <p>
+            <strong>Event announcements:</strong>
+            Check this page regularly for new information
+            about Mt Zion Gospel Music Association events.
+        </p>
+    </div>
+
+</section>
+
+<section class="cta">
+
+    <h2>Be Part of Our Journey</h2>
+
+    <p>
+        Stay connected with Mt Zion Gospel Music Association
+        as we grow through gospel music, worship and service.
+    </p>
+
+    <a href="contact.html" class="button">Contact Us</a>
+
+</section>
+
+<footer>
+    © 2026 Mt Zion Gospel Music Association |
+    Proclaiming the Good News Through Gospel Music
+</footer>
+
+</body>
+</html>
