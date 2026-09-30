@@ -1,578 +1,730 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="./logo.png">
+  <title>Music | Mt Zion Gospel Music Association</title>
 
-    <meta name="description" content="Explore gospel music, worship, recordings and music projects from Mt Zion Gospel Music Association.">
-    <meta name="keywords" content="Mt Zion Gospel Music Association, gospel music, worship, Christian music, gospel ministry">
-    <meta name="author" content="Mt Zion Gospel Music Association">
+  <meta name="description"
+        content="Explore gospel music, worship, musical creativity and youth talent development with Mt Zion Gospel Music Association.">
 
-    <title>Gospel Music | Mt Zion Gospel Music Association</title>
+  <link rel="icon" type="image/png" href="./logo.png">
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #000;
-            color: #fff;
-            line-height: 1.7;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      background: #f7f7f7;
+      color: #222;
+    }
 
-        header {
-            background: #000;
-            border-bottom: 2px solid #d4af37;
-            padding: 14px 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    header {
+      background: #000;
+      border-bottom: 3px solid #d4af37;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-        .header-inner {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-        .brand {
-            color: #fff;
-            text-decoration: none;
-            font-family: Georgia, serif;
-            font-size: 21px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+    .brand {
+      color: #fff;
+      font-family: Georgia, serif;
+      font-size: 21px;
+      font-weight: bold;
+      text-decoration: none;
+      white-space: nowrap;
+    }
 
-        .brand img {
-            width: 55px;
-            height: 55px;
-            object-fit: contain;
-        }
+    .brand span {
+      color: #d4af37;
+    }
 
-        .brand span {
-            color: #d4af37;
-        }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
 
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 14px;
-        }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 11px;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-            transition: 0.3s;
-        }
+    nav a:hover,
+    nav a.active {
+      background: #d4af37;
+      color: #000;
+    }
 
-        nav a:hover {
-            color: #d4af37;
-        }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,.84), rgba(0,0,0,.84)),
+                  url("./logo.png") center/contain no-repeat;
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 75px 20px;
+    }
 
-        .hero {
-            text-align: center;
-            padding: 85px 20px;
-            background:
-                linear-gradient(rgba(0,0,0,.80), rgba(0,0,0,.94));
-            border-bottom: 1px solid #222;
-        }
+    .hero img {
+      width: 120px;
+      max-width: 40%;
+      margin-bottom: 20px;
+    }
 
-        .hero img {
-            width: 95px;
-            height: 95px;
-            object-fit: contain;
-            margin-bottom: 20px;
-        }
+    .hero h1 {
+      font-family: Georgia, serif;
+      font-size: 42px;
+      color: #d4af37;
+      margin-bottom: 10px;
+    }
 
-        .hero h1 {
-            font-family: Georgia, serif;
-            font-size: 48px;
-            color: #d4af37;
-            margin-bottom: 15px;
-        }
+    .hero p {
+      font-size: 18px;
+      max-width: 820px;
+      margin: auto;
+    }
 
-        .hero p {
-            max-width: 750px;
-            margin: auto;
-            font-size: 19px;
-            color: #eee;
-        }
+    .highlight {
+      margin-top: 18px;
+      color: #7cc576;
+      font-weight: bold;
+    }
 
-        .hero-tag {
-            display: inline-block;
-            margin-top: 22px;
-            padding: 9px 18px;
-            border: 1px solid #d4af37;
-            border-radius: 30px;
-            color: #d4af37;
-            font-size: 14px;
-            font-weight: bold;
-        }
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 65px 20px;
+    }
 
-        section {
-            max-width: 1100px;
-            margin: auto;
-            padding: 65px 20px;
-        }
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
 
-        .section-title {
-            text-align: center;
-            font-family: Georgia, serif;
-            color: #d4af37;
-            font-size: 34px;
-            margin-bottom: 20px;
-        }
+    .section-title h2 {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      color: #111;
+      margin-bottom: 10px;
+    }
 
-        .intro {
-            text-align: center;
-            max-width: 820px;
-            margin: 0 auto 45px;
-            color: #ddd;
-            font-size: 17px;
-        }
+    .section-title p {
+      max-width: 820px;
+      margin: auto;
+      color: #666;
+    }
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
+    .intro {
+      background: #fff;
+      border-left: 5px solid #d4af37;
+      padding: 30px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.06);
+    }
 
-        .card {
-            background: #111;
-            border: 1px solid #333;
-            border-top: 4px solid #d4af37;
-            border-radius: 10px;
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s, border-color 0.3s;
-        }
+    .intro p {
+      margin-bottom: 15px;
+    }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #d4af37;
-        }
+    .music-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
 
-        .card h3 {
-            color: #d4af37;
-            font-family: Georgia, serif;
-            font-size: 23px;
-            margin-bottom: 15px;
-        }
+    .music-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.07);
+      border-top: 4px solid #d4af37;
+    }
 
-        .card p {
-            color: #ddd;
-        }
+    .music-card h3 {
+      font-family: Georgia, serif;
+      color: #111;
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
 
-        .youtube-section {
-            max-width: none;
-            background: #0b0b0b;
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-        }
+    .music-card p {
+      color: #555;
+    }
 
-        .youtube-section > * {
-            max-width: 1100px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .video-section {
+      background: #111;
+      color: #fff;
+      max-width: none;
+    }
 
-        .music-box {
-            margin-top: 30px;
-            padding: 40px 25px;
-            text-align: center;
-            border: 2px solid #d4af37;
-            border-radius: 12px;
-            background: #050505;
-        }
+    .video-inner {
+      max-width: 1000px;
+      margin: auto;
+    }
 
-        .music-box h3 {
-            color: #d4af37;
-            font-family: Georgia, serif;
-            font-size: 28px;
-            margin-bottom: 12px;
-        }
+    .video-section .section-title h2 {
+      color: #d4af37;
+    }
 
-        .music-box p {
-            color: #ddd;
-            max-width: 700px;
-            margin: 0 auto 25px;
-        }
+    .video-section .section-title p {
+      color: #ddd;
+    }
 
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            max-width: 850px;
-            margin: 0 auto;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 10px;
-            border: 1px solid #333;
-        }
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 2px solid #333;
+      box-shadow: 0 8px 30px rgba(0,0,0,.35);
+    }
 
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 
-        .channel-link {
-            display: inline-block;
-            margin-top: 25px;
-            color: #d4af37;
-            text-decoration: none;
-            font-weight: bold;
-            border-bottom: 1px solid #d4af37;
-            padding-bottom: 3px;
-        }
+    .channel-link {
+      text-align: center;
+      margin-top: 25px;
+    }
 
-        .channel-link:hover {
-            color: #fff;
-            border-color: #fff;
-        }
+    .channel-link a {
+      display: inline-block;
+      background: #d4af37;
+      color: #000;
+      padding: 12px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .focus-section {
-            background: #000;
-        }
+    .green-section {
+      background: #eef7ee;
+      max-width: none;
+    }
 
-        .focus-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-            margin-top: 35px;
-        }
+    .green-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
 
-        .focus-item {
-            background: #111;
-            padding: 28px;
-            border-radius: 10px;
-            border: 1px solid #333;
-        }
+    .green-section .section-title h2 {
+      color: #245c27;
+    }
 
-        .focus-item h3 {
-            color: #d4af37;
-            font-family: Georgia, serif;
-            margin-bottom: 12px;
-            font-size: 21px;
-        }
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
 
-        .focus-item p {
-            color: #ccc;
-        }
+    .focus-card {
+      background: #fff;
+      padding: 28px;
+      border-left: 4px solid #2f7d32;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.05);
+    }
 
-        .cta {
-            max-width: none;
-            text-align: center;
-            padding: 75px 20px;
-            background: #063d20;
-        }
+    .focus-card h3 {
+      font-family: Georgia, serif;
+      color: #111;
+      margin-bottom: 10px;
+    }
 
-        .cta h2 {
-            font-family: Georgia, serif;
-            color: #fff;
-            font-size: 34px;
-            margin-bottom: 15px;
-        }
+    .focus-card p {
+      color: #555;
+    }
 
-        .cta p {
-            max-width: 700px;
-            margin: 0 auto 28px;
-            color: #eee;
-        }
+    .commitment {
+      background: linear-gradient(135deg, #111, #222);
+      color: #fff;
+      padding: 45px 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
 
-        .button {
-            display: inline-block;
-            padding: 13px 28px;
-            background: #d4af37;
-            color: #000;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    .commitment h2 {
+      color: #d4af37;
+      font-family: Georgia, serif;
+      margin-bottom: 15px;
+    }
 
-        .button:hover {
-            background: #fff;
-        }
+    .commitment p {
+      max-width: 850px;
+      margin: auto;
+      color: #eee;
+    }
 
-        footer {
-            text-align: center;
-            padding: 28px 15px;
-            background: #000;
-            border-top: 1px solid #333;
-            color: #aaa;
-            font-size: 14px;
-        }
+    .cta {
+      text-align: center;
+      padding-top: 35px;
+    }
 
-        footer strong {
-            color: #d4af37;
-        }
+    .btn {
+      display: inline-block;
+      margin: 7px;
+      padding: 12px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .3s;
+    }
 
-        @media (max-width: 800px) {
+    .btn-gold {
+      background: #d4af37;
+      color: #000;
+    }
 
-            .header-inner {
-                flex-direction: column;
-            }
+    .btn-green {
+      background: #2f7d32;
+      color: #fff;
+    }
 
-            .cards,
-            .focus-grid {
-                grid-template-columns: 1fr;
-            }
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: .9;
+    }
 
-            .hero {
-                padding: 65px 20px;
-            }
+    footer {
+      background: #000;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 3px solid #d4af37;
+    }
 
-            .hero h1 {
-                font-size: 38px;
-            }
+    footer strong {
+      color: #d4af37;
+    }
 
-            .hero p {
-                font-size: 17px;
-            }
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+    }
 
-            nav {
-                gap: 10px;
-            }
+    @media (max-width: 850px) {
 
-            .section-title {
-                font-size: 29px;
-            }
-        }
+      .nav-container {
+        flex-direction: column;
+      }
 
-        @media (max-width: 500px) {
+      nav {
+        width: 100%;
+      }
 
-            .brand {
-                font-size: 18px;
-                text-align: center;
-            }
+      .hero h1 {
+        font-size: 34px;
+      }
 
-            .brand img {
-                width: 48px;
-                height: 48px;
-            }
+      .music-grid,
+      .focus-grid {
+        grid-template-columns: 1fr;
+      }
+    }
 
-            nav a {
-                font-size: 13px;
-            }
+    @media (max-width: 500px) {
 
-            .music-box {
-                padding: 30px 15px;
-            }
-        }
-    </style>
+      .hero {
+        padding: 55px 15px;
+      }
+
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 45px 15px;
+      }
+
+      nav a {
+        font-size: 13px;
+        padding: 7px 8px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <div class="header-inner">
 
-        <a href="index.html" class="brand">
-            <img src="./logo.png" alt="Mt Zion Gospel Music Association Logo">
-            <span>Mt Zion Gospel Music Association</span>
-        </a>
+  <div class="nav-container">
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="music.html">Music</a>
-            <a href="ministry.html">Ministry</a>
-            <a href="events.html">Events</a>
-            <a href="projects.html">Projects</a>
-            <a href="support.html">Support</a>
-            <a href="social.html">Connect</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+    <a href="index.html" class="brand">
+      Mt Zion <span>Gospel Music Association</span>
+    </a>
 
-    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="music.html" class="active">Music</a>
+      <a href="ministry.html">Ministry</a>
+      <a href="events.html">Events</a>
+      <a href="projects.html">Projects</a>
+      <a href="support.html">Support</a>
+      <a href="social.html">Connect</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+
 </header>
+
 
 <section class="hero">
 
-    <img src="./logo.png" alt="Mt Zion Gospel Music Association">
+  <img src="./logo.png"
+       alt="Mt Zion Gospel Music Association logo">
 
-    <h1>Gospel Music</h1>
+  <h1>Our Music</h1>
 
-    <p>
-        Proclaiming the Good News Through Gospel Music
-    </p>
+  <p>
+    Gospel Music for Faith, Hope, Peace and Unity
+  </p>
 
-    <div class="hero-tag">
-        Faith • Worship • Music • Ministry • Hope
-    </div>
+  <p class="highlight">
+    Faith • Worship • Music • Youth • Hope
+  </p>
 
 </section>
+
 
 <section>
 
-    <h2 class="section-title">Welcome to Our Music Ministry</h2>
+  <div class="section-title">
 
-    <p class="intro">
-        Gospel music is at the heart of the vision of Mt Zion Gospel Music Association.
-        Through songs, worship, recordings and creative music projects, we seek to
-        encourage faith, inspire hope and share the message of the Gospel.
+    <h2>Welcome to Our Music Ministry</h2>
+
+    <p>
+      Proclaiming the Good News Through Gospel Music
     </p>
 
-    <div class="cards">
+  </div>
 
-        <div class="card">
-            <h3>Featured Gospel Music</h3>
+  <div class="intro">
 
-            <p>
-                A dedicated space for gospel songs, worship recordings,
-                inspirational music and other musical presentations
-                connected with Mt Zion.
-            </p>
-        </div>
+    <p>
+      <strong>Music is at the heart of Mt Zion Gospel Music Association.</strong>
+      We believe gospel music can reach hearts, strengthen faith,
+      encourage hope and bring people together.
+    </p>
 
-        <div class="card">
-            <h3>Artists & Musicians</h3>
+    <p>
+      Through gospel songs, worship and musical creativity, we seek to
+      provide positive opportunities for people to share their gifts and
+      encourage one another.
+    </p>
 
-            <p>
-                A growing space to introduce gospel artists, singers,
-                worship leaders and musicians connected with the
-                association and its ministry.
-            </p>
-        </div>
+    <p>
+      We especially value the potential of children and young people.
+      Music can help young people discover their talents, build
+      confidence, express themselves positively and develop a sense of
+      purpose and responsibility.
+    </p>
 
-        <div class="card">
-            <h3>Songs & Projects</h3>
-
-            <p>
-                We look forward to presenting gospel songs,
-                music projects and creative works that encourage
-                faith and glorify God.
-            </p>
-        </div>
-
-    </div>
+  </div>
 
 </section>
 
-<section class="youtube-section">
 
-    <h2 class="section-title">Watch & Listen</h2>
+<section>
 
-    <div class="music-box">
+  <div class="section-title">
 
-        <h3>Featured Gospel Music</h3>
+    <h2>Our Music Focus</h2>
 
-        <p>
-            Watch and listen to gospel music connected with
-            Mt Zion Gospel Music Association.
-        </p>
+    <p>
+      Our music ministry is intended to serve both spiritual and
+      community purposes.
+    </p>
 
-        <div class="video-wrapper">
+  </div>
 
-            <iframe
-                src="https://www.youtube.com/embed/f0zcKgd0fRE"
-                title="Mt Zion Gospel Music Association - Featured Gospel Music"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
 
-        </div>
+  <div class="music-grid">
 
-        <a
-            href="https://www.youtube.com/@MtZionGospelMusicAssociation"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="channel-link">
-            Visit Our YouTube Channel →
-        </a>
+
+    <div class="music-card">
+
+      <h3>🙏 Worship & Faith</h3>
+
+      <p>
+        Gospel music that encourages worship, prayer, faith and a deeper
+        relationship with God.
+      </p>
 
     </div>
 
+
+    <div class="music-card">
+
+      <h3>🎶 Encouragement & Hope</h3>
+
+      <p>
+        Music that encourages people facing difficulties and reminds
+        individuals and families that there is hope for the future.
+      </p>
+
+    </div>
+
+
+    <div class="music-card">
+
+      <h3>👧 Youth & Creativity</h3>
+
+      <p>
+        Encouraging children and young people to discover and develop
+        their musical gifts, creativity and confidence.
+      </p>
+
+    </div>
+
+
+    <div class="music-card">
+
+      <h3>🕊️ Peace & Unity</h3>
+
+      <p>
+        Using gospel music as a positive way to encourage respect,
+        reconciliation, peaceful relationships and unity.
+      </p>
+
+    </div>
+
+
+    <div class="music-card">
+
+      <h3>🎤 Musical Development</h3>
+
+      <p>
+        Supporting the growth of musical abilities and creating
+        opportunities for people to share their talents responsibly.
+      </p>
+
+    </div>
+
+
+    <div class="music-card">
+
+      <h3>🌱 Positive Opportunities</h3>
+
+      <p>
+        Encouraging young people to use music and creativity as
+        constructive pathways that can contribute positively to their
+        families and communities.
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
 
-<section class="focus-section">
 
-    <h2 class="section-title">Our Music Focus</h2>
+<section class="video-section">
 
-    <p class="intro">
-        Our music ministry is intended to create opportunities for
-        gospel music, worship, creativity and positive community
-        engagement.
-    </p>
+  <div class="video-inner">
+
+    <div class="section-title">
+
+      <h2>Featured Gospel Music</h2>
+
+      <p>
+        Watch and share gospel music from Mt Zion Gospel Music Association.
+      </p>
+
+    </div>
+
+
+    <div class="video-wrapper">
+
+      <iframe
+        src="https://www.youtube.com/embed/f0zcKgd0fRE"
+        title="Mt Zion Gospel Music Association"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+
+    </div>
+
+
+    <div class="channel-link">
+
+      <a href="https://www.youtube.com/@MtZionGospelMusicAssociation"
+         target="_blank"
+         rel="noopener noreferrer">
+        Visit Our YouTube Channel
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="green-section">
+
+  <div class="green-inner">
+
+    <div class="section-title">
+
+      <h2>Music & Community Impact</h2>
+
+      <p>
+        We believe music can contribute to positive development beyond
+        the stage.
+      </p>
+
+    </div>
+
 
     <div class="focus-grid">
 
-        <div class="focus-item">
 
-            <h3>Worship</h3>
+      <div class="focus-card">
 
-            <p>
-                Supporting music that encourages worship,
-                prayer, praise and a deeper relationship with God.
-            </p>
+        <h3>🌱 Developing Young Talent</h3>
 
-        </div>
+        <p>
+          Encourage children and young people to discover their abilities
+          and develop their musical gifts from an early age.
+        </p>
 
-        <div class="focus-item">
+      </div>
 
-            <h3>Encouragement</h3>
 
-            <p>
-                Sharing music that brings hope, encouragement
-                and positive messages to individuals and communities.
-            </p>
+      <div class="focus-card">
 
-        </div>
+        <h3>🤝 Building Relationships</h3>
 
-        <div class="focus-item">
+        <p>
+          Use music to bring people together and encourage respect,
+          fellowship and positive relationships.
+        </p>
 
-            <h3>Youth & Creativity</h3>
+      </div>
 
-            <p>
-                Creating opportunities for young people and
-                emerging musicians to develop their gifts through
-                gospel music and creative expression.
-            </p>
 
-        </div>
+      <div class="focus-card">
+
+        <h3>🕊️ Promoting Peace</h3>
+
+        <p>
+          Encourage peace, reconciliation and unity through gospel
+          messages, worship and community engagement.
+        </p>
+
+      </div>
+
+
+      <div class="focus-card">
+
+        <h3>❤️ Encouraging Families</h3>
+
+        <p>
+          Share messages of faith, hope, love and responsibility that
+          encourage individuals and families.
+        </p>
+
+      </div>
 
     </div>
 
+  </div>
+
 </section>
 
-<section class="cta">
 
-    <h2>Be Part of the Gospel Music Journey</h2>
+<section>
+
+  <div class="commitment">
+
+    <h2>Growing Our Music Ministry</h2>
 
     <p>
-        Join us as we use gospel music to encourage faith,
-        worship, unity, hope and service.
+      Mt Zion Gospel Music Association seeks to develop gospel music as
+      a meaningful ministry and positive pathway for people of all ages.
+      As our association grows, we hope to create more opportunities for
+      worship, musical development, youth participation, peacebuilding
+      and community engagement.
     </p>
 
-    <a href="support.html" class="button">
-        Support the Mission
+  </div>
+
+
+  <div class="cta">
+
+    <a href="ministry.html" class="btn btn-gold">
+      Explore Our Ministry
     </a>
 
+    <a href="projects.html" class="btn btn-green">
+      View Our Projects
+    </a>
+
+    <a href="social.html" class="btn btn-gold">
+      Connect With Us
+    </a>
+
+  </div>
+
 </section>
+
 
 <footer>
 
-    © 2026 <strong>Mt Zion Gospel Music Association</strong> |
+  <p>
+    <strong>Mt Zion Gospel Music Association</strong>
+  </p>
+
+  <p>
     Proclaiming the Good News Through Gospel Music
+  </p>
+
+  <p style="margin-top:10px;">
+    Email:
+    <a href="mailto:mtziongospelmusicassociation@gmail.com">
+      mtziongospelmusicassociation@gmail.com
+    </a>
+  </p>
+
+  <p style="margin-top:15px;">
+    © 2026 Mt Zion Gospel Music Association. All rights reserved.
+  </p>
 
 </footer>
 
