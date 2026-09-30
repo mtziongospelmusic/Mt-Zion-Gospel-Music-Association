@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="./logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="icon" type="image/png" href="./logo.png">
 
-    <title>Contact | Mt Zion Gospel Music Association</title>
+    <meta name="description" content="Contact Mt Zion Gospel Music Association for gospel music, ministry, projects, events, fellowship and support enquiries.">
+    <meta name="keywords" content="Mt Zion Gospel Music Association, contact, gospel music, ministry, fellowship, Papua New Guinea">
+    <meta name="author" content="Mt Zion Gospel Music Association">
+
+    <title>Contact Us | Mt Zion Gospel Music Association</title>
 
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -25,7 +33,10 @@
         header {
             background: #000;
             border-bottom: 2px solid #d4af37;
-            padding: 15px 5%;
+            padding: 14px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .header-inner {
@@ -34,14 +45,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 20px;
+            gap: 25px;
         }
 
         .brand {
             color: #fff;
             text-decoration: none;
             font-family: Georgia, serif;
-            font-size: 21px;
+            font-size: 20px;
             font-weight: bold;
             display: flex;
             align-items: center;
@@ -49,8 +60,8 @@
         }
 
         .brand img {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             object-fit: contain;
         }
 
@@ -62,7 +73,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 13px;
         }
 
         nav a {
@@ -70,6 +81,7 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 14px;
+            transition: 0.3s;
         }
 
         nav a:hover {
@@ -78,7 +90,16 @@
 
         .hero {
             text-align: center;
-            padding: 80px 20px;
+            padding: 85px 20px 70px;
+            background:
+                radial-gradient(circle at center, #151515 0%, #000 65%);
+        }
+
+        .hero-logo {
+            width: 105px;
+            height: 105px;
+            object-fit: contain;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
@@ -88,26 +109,34 @@
             margin-bottom: 15px;
         }
 
+        .hero .tagline {
+            color: #d4af37;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
         .hero p {
-            max-width: 750px;
+            max-width: 760px;
             margin: auto;
             color: #ddd;
             font-size: 19px;
         }
 
         section {
-            max-width: 1000px;
+            max-width: 1050px;
             margin: auto;
-            padding: 60px 20px;
+            padding: 65px 20px;
         }
 
         .contact-box {
             background: #111;
             border: 1px solid #333;
             border-top: 5px solid #d4af37;
-            border-radius: 12px;
-            padding: 45px;
+            border-radius: 14px;
+            padding: 50px;
             text-align: center;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
         }
 
         .contact-box h2 {
@@ -117,19 +146,36 @@
             margin-bottom: 20px;
         }
 
-        .contact-box > p {
-            max-width: 700px;
+        .contact-intro {
+            max-width: 760px;
             margin: 0 auto 35px;
             color: #ddd;
         }
 
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
         .contact-item {
-            max-width: 650px;
-            margin: 20px auto;
-            padding: 25px;
+            padding: 28px 22px;
             background: #050505;
             border: 1px solid #333;
-            border-radius: 8px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-4px);
+            border-color: #d4af37;
+        }
+
+        .contact-icon {
+            font-size: 34px;
+            margin-bottom: 10px;
         }
 
         .contact-item h3 {
@@ -140,7 +186,7 @@
         }
 
         .contact-item p {
-            color: #ddd;
+            color: #ccc;
         }
 
         .contact-item a {
@@ -155,9 +201,10 @@
         }
 
         .message {
-            margin-top: 30px;
-            padding: 25px;
+            margin-top: 35px;
+            padding: 28px;
             background: #063d20;
+            border-left: 4px solid #d4af37;
             border-radius: 10px;
         }
 
@@ -166,8 +213,9 @@
         }
 
         .cta {
+            max-width: none;
             text-align: center;
-            padding: 70px 20px;
+            padding: 75px 20px;
             background: #0b0b0b;
             border-top: 1px solid #222;
         }
@@ -179,19 +227,36 @@
             margin-bottom: 15px;
         }
 
+        .cta p {
+            color: #ccc;
+        }
+
         .button {
             display: inline-block;
-            margin-top: 20px;
+            margin: 20px 6px 0;
             padding: 13px 28px;
             background: #d4af37;
             color: #000;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         .button:hover {
             background: #fff;
+            transform: translateY(-2px);
+        }
+
+        .button.green {
+            background: #063d20;
+            color: #fff;
+            border: 1px solid #d4af37;
+        }
+
+        .button.green:hover {
+            background: #d4af37;
+            color: #000;
         }
 
         footer {
@@ -203,18 +268,70 @@
             font-size: 14px;
         }
 
-        @media (max-width: 800px) {
+        footer strong {
+            color: #d4af37;
+        }
+
+        @media (max-width: 900px) {
 
             .header-inner {
                 flex-direction: column;
             }
 
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .brand {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                position: relative;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 60px 20px 50px;
+            }
+
+            .hero-logo {
+                width: 90px;
+                height: 90px;
+            }
+
             .hero h1 {
-                font-size: 38px;
+                font-size: 37px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 45px 15px;
             }
 
             .contact-box {
-                padding: 30px 20px;
+                padding: 32px 20px;
+            }
+
+            .contact-box h2 {
+                font-size: 28px;
+            }
+
+            .cta h2 {
+                font-size: 29px;
             }
         }
     </style>
@@ -223,16 +340,22 @@
 <body>
 
 <header>
+
     <div class="header-inner">
 
         <a href="index.html" class="brand">
-            <img src="./logo.png"
-                 alt="Mt Zion Gospel Music Association Logo">
+
+            <img
+                src="./logo.png"
+                alt="Mt Zion Gospel Music Association Logo"
+            >
 
             <span>Mt Zion Gospel Music Association</span>
+
         </a>
 
         <nav>
+
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="music.html">Music</a>
@@ -240,23 +363,37 @@
             <a href="events.html">Events</a>
             <a href="projects.html">Projects</a>
             <a href="support.html">Support</a>
-<a href="social.html">Connect</a>
-<a href="contact.html">Contact</a>
+            <a href="social.html">Connect</a>
+            <a href="contact.html">Contact</a>
+
         </nav>
 
     </div>
+
 </header>
+
 
 <section class="hero">
 
+    <img
+        src="./logo.png"
+        alt="Mt Zion Gospel Music Association Logo"
+        class="hero-logo"
+    >
+
     <h1>Contact Us</h1>
+
+    <div class="tagline">
+        Faith • Music • Ministry • Fellowship • Hope
+    </div>
 
     <p>
         Connect with Mt Zion Gospel Music Association
-        through gospel music, ministry and fellowship.
+        through gospel music, ministry, fellowship and service.
     </p>
 
 </section>
+
 
 <section>
 
@@ -264,35 +401,86 @@
 
         <h2>Mt Zion Gospel Music Association</h2>
 
-        <p>
+        <p class="contact-intro">
             We welcome your questions, encouragement, fellowship
             and enquiries about gospel music, ministry, projects,
             events and opportunities to connect with us.
         </p>
 
-        <div class="contact-item">
 
-            <h3>Email</h3>
+        <div class="contact-grid">
 
-            <p>
-                <a href="mailto:mtziongospelmusicassociation@gmail.com">
-                    mtziongospelmusicassociation@gmail.com
-                </a>
-            </p>
+
+            <!-- Email -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">✉️</div>
+
+                <h3>Email</h3>
+
+                <p>
+                    Contact us through our official association email.
+                </p>
+
+                <p>
+                    <a href="mailto:mtziongospelmusicassociation@gmail.com">
+                        mtziongospelmusicassociation@gmail.com
+                    </a>
+                </p>
+
+            </div>
+
+
+            <!-- Ministry -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">🎵</div>
+
+                <h3>Gospel Music & Ministry</h3>
+
+                <p>
+                    For enquiries about gospel music, ministry,
+                    fellowship and future activities, please contact us.
+                </p>
+
+            </div>
+
+
+            <!-- Projects -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">🌱</div>
+
+                <h3>Projects & Community</h3>
+
+                <p>
+                    Contact us regarding projects, community initiatives
+                    and opportunities to support our vision.
+                </p>
+
+            </div>
+
+
+            <!-- Support -->
+
+            <div class="contact-item">
+
+                <div class="contact-icon">🤝</div>
+
+                <h3>Support & Partnership</h3>
+
+                <p>
+                    If you would like to support the association,
+                    please contact us for current arrangements.
+                </p>
+
+            </div>
 
         </div>
 
-        <div class="contact-item">
-
-            <h3>Gospel Music & Ministry</h3>
-
-            <p>
-                For enquiries about gospel music, ministry,
-                projects, events and ways to support the association,
-                please contact us by email.
-            </p>
-
-        </div>
 
         <div class="message">
 
@@ -309,28 +497,39 @@
 
 </section>
 
+
 <section class="cta">
 
     <h2>Proclaiming the Good News Through Gospel Music</h2>
 
     <p>
-        Stay connected with Mt Zion Gospel Music Association.
+        Stay connected with Mt Zion Gospel Music Association
+        and follow our journey.
     </p>
 
     <a href="music.html" class="button">
         Explore Gospel Music
     </a>
 
+    <a href="social.html" class="button green">
+        Connect With Us
+    </a>
+
 </section>
+
 
 <footer>
 
     <p>
-        © 2026 Mt Zion Gospel Music Association
+        <strong>Mt Zion Gospel Music Association</strong>
     </p>
 
     <p>
         Proclaiming the Good News Through Gospel Music
+    </p>
+
+    <p>
+        © 2026 Mt Zion Gospel Music Association
     </p>
 
 </footer>
