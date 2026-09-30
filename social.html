@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="./logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="icon" type="image/png" href="./logo.png">
+
+    <meta name="description" content="Connect with Mt Zion Gospel Music Association through Facebook, YouTube, email and our official website.">
+    <meta name="keywords" content="Mt Zion Gospel Music Association, Facebook, YouTube, gospel music, ministry, contact">
+    <meta name="author" content="Mt Zion Gospel Music Association">
 
     <title>Connect With Us | Mt Zion Gospel Music Association</title>
 
@@ -13,6 +17,10 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -25,7 +33,10 @@
         header {
             background: #000;
             border-bottom: 2px solid #d4af37;
-            padding: 15px 5%;
+            padding: 14px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .header-inner {
@@ -34,14 +45,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 20px;
+            gap: 25px;
         }
 
         .brand {
             color: #fff;
             text-decoration: none;
             font-family: Georgia, serif;
-            font-size: 21px;
+            font-size: 20px;
             font-weight: bold;
             display: flex;
             align-items: center;
@@ -49,8 +60,8 @@
         }
 
         .brand img {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             object-fit: contain;
         }
 
@@ -62,7 +73,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 13px;
         }
 
         nav a {
@@ -70,6 +81,7 @@
             text-decoration: none;
             font-weight: bold;
             font-size: 14px;
+            transition: 0.3s;
         }
 
         nav a:hover {
@@ -78,7 +90,16 @@
 
         .hero {
             text-align: center;
-            padding: 80px 20px 60px;
+            padding: 85px 20px 70px;
+            background:
+                radial-gradient(circle at center, #151515 0%, #000 65%);
+        }
+
+        .hero-logo {
+            width: 105px;
+            height: 105px;
+            object-fit: contain;
+            margin-bottom: 20px;
         }
 
         .hero h1 {
@@ -88,8 +109,15 @@
             margin-bottom: 15px;
         }
 
+        .hero .tagline {
+            color: #d4af37;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
         .hero p {
-            max-width: 750px;
+            max-width: 760px;
             margin: auto;
             color: #ddd;
             font-size: 18px;
@@ -98,7 +126,24 @@
         section {
             max-width: 1050px;
             margin: auto;
-            padding: 50px 20px 80px;
+            padding: 65px 20px;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 45px;
+        }
+
+        .intro h2 {
+            color: #d4af37;
+            font-family: Georgia, serif;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            color: #bbb;
         }
 
         .social-grid {
@@ -111,47 +156,68 @@
             background: #111;
             border: 1px solid #333;
             border-top: 5px solid #d4af37;
-            border-radius: 10px;
-            padding: 35px 25px;
+            border-radius: 12px;
+            padding: 38px 28px;
             text-align: center;
+            transition: 0.3s;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            border-color: #d4af37;
+        }
+
+        .social-icon {
+            font-size: 38px;
+            margin-bottom: 12px;
         }
 
         .social-card h2 {
             color: #d4af37;
             font-family: Georgia, serif;
             margin-bottom: 15px;
+            font-size: 27px;
         }
 
         .social-card p {
             color: #ccc;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .button {
             display: inline-block;
-            padding: 12px 25px;
+            margin: 5px;
+            padding: 12px 23px;
             background: #d4af37;
             color: #000;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         .button:hover {
             background: #fff;
+            transform: translateY(-2px);
         }
 
         .email {
             color: #d4af37;
             font-weight: bold;
             word-break: break-word;
+            text-decoration: none;
+        }
+
+        .email:hover {
+            color: #fff;
         }
 
         .message {
-            margin-top: 35px;
+            margin-top: 40px;
             background: #063d20;
+            border-left: 4px solid #d4af37;
             border-radius: 10px;
-            padding: 30px;
+            padding: 32px;
             text-align: center;
         }
 
@@ -159,6 +225,30 @@
             color: #d4af37;
             font-family: Georgia, serif;
             margin-bottom: 12px;
+            font-size: 28px;
+        }
+
+        .message p {
+            color: #eee;
+        }
+
+        .support-section {
+            max-width: none;
+            background: #0b0b0b;
+            text-align: center;
+        }
+
+        .support-section h2 {
+            color: #d4af37;
+            font-family: Georgia, serif;
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .support-section p {
+            color: #ccc;
+            max-width: 700px;
+            margin: auto;
         }
 
         footer {
@@ -174,18 +264,62 @@
             color: #d4af37;
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
 
             .header-inner {
                 flex-direction: column;
             }
 
-            .hero h1 {
-                font-size: 38px;
-            }
-
             .social-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .brand {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                position: relative;
+            }
+
+            nav {
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .hero {
+                padding: 60px 20px 50px;
+            }
+
+            .hero-logo {
+                width: 90px;
+                height: 90px;
+            }
+
+            .hero h1 {
+                font-size: 37px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 45px 15px;
+            }
+
+            .social-card {
+                padding: 30px 20px;
+            }
+
+            .message h2 {
+                font-size: 24px;
             }
         }
     </style>
@@ -199,8 +333,10 @@
 
         <a href="index.html" class="brand">
 
-            <img src="./logo.png"
-                 alt="Mt Zion Gospel Music Association Logo">
+            <img
+                src="./logo.png"
+                alt="Mt Zion Gospel Music Association Logo"
+            >
 
             <span>Mt Zion Gospel Music Association</span>
 
@@ -215,6 +351,7 @@
             <a href="events.html">Events</a>
             <a href="projects.html">Projects</a>
             <a href="support.html">Support</a>
+            <a href="social.html">Connect</a>
             <a href="contact.html">Contact</a>
 
         </nav>
@@ -226,11 +363,22 @@
 
 <section class="hero">
 
+    <img
+        src="./logo.png"
+        alt="Mt Zion Gospel Music Association Logo"
+        class="hero-logo"
+    >
+
     <h1>Connect With Us</h1>
+
+    <div class="tagline">
+        Faith • Music • Ministry • Fellowship • Hope
+    </div>
 
     <p>
         Stay connected with Mt Zion Gospel Music Association
-        through gospel music, ministry, fellowship and updates.
+        through gospel music, ministry, fellowship, updates
+        and community activities.
     </p>
 
 </section>
@@ -238,9 +386,27 @@
 
 <section>
 
+    <div class="intro">
+
+        <h2>Stay Connected</h2>
+
+        <p>
+            Follow our official channels to receive updates,
+            discover gospel music, learn about ministry activities
+            and stay connected with the Mt Zion family.
+        </p>
+
+    </div>
+
+
     <div class="social-grid">
 
+
+        <!-- Facebook -->
+
         <div class="social-card">
+
+            <div class="social-icon">📘</div>
 
             <h2>Facebook</h2>
 
@@ -250,66 +416,91 @@
                 events and fellowship.
             </p>
 
-           <a href="https://www.facebook.com/mtziongospelmusic"
-   class="button"
-   target="_blank"
-   rel="noopener noreferrer">
-    Visit Our Facebook Page
-</a>
+            <a
+                href="https://www.facebook.com/mtziongospelmusic"
+                class="button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Visit Our Facebook Page
+            </a>
+
         </div>
 
 
+        <!-- YouTube -->
+
         <div class="social-card">
+
+            <div class="social-icon">▶️</div>
 
             <h2>YouTube</h2>
 
             <p>
-                Watch gospel music and video content from
-                Mt Zion Gospel Music Association.
+                Watch gospel music, videos and other content
+                from Mt Zion Gospel Music Association.
             </p>
 
-            <a href="music.html" class="button">
-    Watch Our Music
-</a>
+            <a
+                href="music.html"
+                class="button"
+            >
+                Watch Our Music
+            </a>
 
-<a href="https://www.youtube.com/@MtZionGospelMusicAssociation"
-   class="button"
-   target="_blank"
-   rel="noopener noreferrer">
-    Visit Our YouTube Channel
-</a>
+            <a
+                href="https://www.youtube.com/@MtZionGospelMusicAssociation"
+                class="button"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Visit Our YouTube Channel
+            </a>
 
         </div>
 
 
+        <!-- Email -->
+
         <div class="social-card">
+
+            <div class="social-icon">✉️</div>
 
             <h2>Email</h2>
 
             <p>
-                For enquiries, fellowship, ministry,
-                projects and support, contact us by email.
+                For enquiries, fellowship, ministry, projects
+                and support, contact the association by email.
             </p>
 
-            <a class="email"
-               href="mailto:mtziongospelmusicassociation@gmail.com">
+            <a
+                class="email"
+                href="mailto:mtziongospelmusicassociation@gmail.com"
+            >
                 mtziongospelmusicassociation@gmail.com
             </a>
 
         </div>
 
 
+        <!-- Website -->
+
         <div class="social-card">
 
-            <h2>Website</h2>
+            <div class="social-icon">🌐</div>
+
+            <h2>Our Website</h2>
 
             <p>
-                Explore our music, ministry, events,
-                projects and opportunities to support Mt Zion.
+                Explore our music, ministry, events, projects,
+                support information and organizational vision.
             </p>
 
-            <a href="index.html" class="button">
-                Visit Home
+            <a
+                href="index.html"
+                class="button"
+            >
+                Visit Our Home Page
             </a>
 
         </div>
@@ -323,10 +514,27 @@
 
         <p>
             Thank you for connecting with Mt Zion Gospel Music Association.
-            Your prayers, encouragement and support are appreciated.
+            Your prayers, encouragement and support are greatly appreciated.
         </p>
 
     </div>
+
+</section>
+
+
+<section class="support-section">
+
+    <h2>Be Part of the Journey</h2>
+
+    <p>
+        Stay connected, share our mission and support the vision
+        as Mt Zion Gospel Music Association develops its gospel
+        music, ministry and community initiatives.
+    </p>
+
+    <a href="support.html" class="button">
+        Support Our Mission
+    </a>
 
 </section>
 
