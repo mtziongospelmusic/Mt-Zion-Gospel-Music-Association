@@ -3,789 +3,212 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Projects | Mt Zion Gospel Music Association</title>
-
-  <meta name="description"
-        content="Explore the development focus of Mt Zion Gospel Music Association, including gospel music, youth development, peace and reconciliation, community development and support for marginalized people.">
-
+  <meta name="description" content="Explore the project priorities and future development vision of Mt Zion Gospel Music Association, including gospel music, youth, peace and community development.">
   <link rel="icon" type="image/png" href="./logo.png">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root{
+      --black:#050505;
+      --gold:#d4af37;
+      --gold-light:#f0d77a;
+      --white:#fff;
+      --muted:#c9c9c9;
+      --green:#1f7a4d;
+      --border:rgba(212,175,55,.22);
+      --shadow:0 18px 50px rgba(0,0,0,.28)
     }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--black);color:var(--white);line-height:1.7}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px;border-radius:4px}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
-      background: #f7f7f7;
-      color: #222;
+    .site-header{position:sticky;top:0;z-index:1000;background:rgba(5,5,5,.96);border-bottom:1px solid var(--border);backdrop-filter:blur(10px)}
+    .nav-wrap{max-width:1180px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-family:Georgia,"Times New Roman",serif;font-size:21px;font-weight:700;white-space:nowrap}
+    .brand span{color:var(--gold)}
+    nav ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px}
+    nav a{display:block;padding:8px 10px;color:#ddd;font-size:14px;border-radius:6px;transition:.2s}
+    nav a:hover,nav a.active{color:var(--gold-light);background:rgba(212,175,55,.09)}
+
+    .hero{min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:90px 22px 70px;background:radial-gradient(circle at 50% 20%,rgba(212,175,55,.13),transparent 38%),linear-gradient(180deg,#111,#050505)}
+    .hero-inner{max-width:920px}
+    .hero-logo{width:115px;height:115px;object-fit:contain;margin-bottom:24px;filter:drop-shadow(0 10px 24px rgba(0,0,0,.45))}
+    .eyebrow{color:var(--gold-light);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(42px,7vw,70px);line-height:1.08;margin-bottom:18px}
+    .hero p{max-width:760px;margin:auto;color:var(--muted);font-size:19px}
+    .highlight{margin-top:22px;color:var(--gold-light);font-weight:700;letter-spacing:1px}
+
+    .section{max-width:1120px;margin:auto;padding:80px 22px}
+    .section.alt{max-width:none;background:#0d0d0d}
+    .inner{max-width:1120px;margin:auto}
+    .heading{text-align:center;margin-bottom:42px}
+    .heading h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(30px,5vw,44px);margin-bottom:12px}
+    .heading p{max-width:780px;margin:auto;color:var(--muted)}
+
+    .notice{max-width:900px;margin:0 auto 42px;padding:25px;border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:12px;background:#111}
+    .notice h3{font-family:Georgia,"Times New Roman",serif;color:var(--gold-light);margin-bottom:7px}
+    .notice p{color:#ccc}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:linear-gradient(145deg,#171717,#0c0c0c);border:1px solid var(--border);border-radius:16px;padding:28px;box-shadow:var(--shadow)}
+    .card h3{font-family:Georgia,"Times New Roman",serif;color:var(--gold-light);font-size:22px;margin-bottom:10px}
+    .card p{color:#d0d0d0}
+
+    .approach{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:950px;margin:auto}
+    .step{text-align:center;padding:24px;background:#111;border:1px solid var(--border);border-radius:12px}
+    .number{display:flex;width:42px;height:42px;margin:0 auto 12px;align-items:center;justify-content:center;border:1px solid var(--gold);border-radius:50%;color:var(--gold-light);font-weight:700}
+    .step h3{font-family:Georgia,"Times New Roman",serif;color:var(--gold-light);margin-bottom:6px}
+    .step p{color:#bbb}
+
+    .cta{text-align:center;background:linear-gradient(135deg,#111,#080808);border:1px solid var(--border);border-radius:18px;padding:48px 25px;box-shadow:var(--shadow)}
+    .cta h2{font-family:Georgia,"Times New Roman",serif;font-size:34px;margin-bottom:12px}
+    .cta p{max-width:720px;margin:auto;color:var(--muted)}
+    .buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:28px}
+    .button{display:inline-block;padding:12px 20px;border:1px solid var(--gold);border-radius:7px;color:var(--gold-light);font-weight:700;transition:.2s}
+    .button:hover{background:var(--gold);color:#080808}
+    .button.green{border-color:var(--green);color:#dff5e8}
+    .button.green:hover{background:var(--green);color:#fff}
+
+    footer{border-top:1px solid var(--border);background:#030303;text-align:center;padding:30px 20px;color:#aaa;font-size:14px}
+    footer strong{color:var(--gold-light)}
+
+    @media(max-width:850px){
+      .nav-wrap{flex-direction:column;align-items:center}
+      nav ul{justify-content:center}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .approach{grid-template-columns:1fr}
     }
-
-    header {
-      background: #000;
-      border-bottom: 3px solid #d4af37;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .brand {
-      color: #fff;
-      font-family: Georgia, serif;
-      font-size: 21px;
-      font-weight: bold;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .brand span {
-      color: #d4af37;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 8px 11px;
-      border-radius: 5px;
-      font-size: 14px;
-      transition: 0.3s;
-    }
-
-    nav a:hover,
-    nav a.active {
-      background: #d4af37;
-      color: #000;
-    }
-
-    .hero {
-      background: linear-gradient(rgba(0,0,0,.84), rgba(0,0,0,.84)),
-                  url("./logo.png") center/contain no-repeat;
-      background-color: #111;
-      color: #fff;
-      text-align: center;
-      padding: 75px 20px;
-    }
-
-    .hero img {
-      width: 120px;
-      max-width: 40%;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 {
-      font-family: Georgia, serif;
-      font-size: 42px;
-      color: #d4af37;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .highlight {
-      margin-top: 18px;
-      color: #7cc576;
-      font-weight: bold;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 65px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 35px;
-    }
-
-    .section-title h2 {
-      font-family: Georgia, serif;
-      font-size: 32px;
-      color: #111;
-      margin-bottom: 10px;
-    }
-
-    .section-title p {
-      max-width: 820px;
-      margin: auto;
-      color: #666;
-    }
-
-    .intro {
-      background: #fff;
-      border-left: 5px solid #d4af37;
-      padding: 30px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.06);
-    }
-
-    .intro p {
-      margin-bottom: 15px;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
-    }
-
-    .project-card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,.07);
-      border-top: 4px solid #d4af37;
-    }
-
-    .project-card h3 {
-      font-family: Georgia, serif;
-      font-size: 23px;
-      color: #111;
-      margin-bottom: 12px;
-    }
-
-    .project-card p {
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    .status {
-      display: inline-block;
-      background: #eee;
-      color: #555;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    .green-section {
-      background: #eef7ee;
-      max-width: none;
-    }
-
-    .green-inner {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .green-section .section-title h2 {
-      color: #245c27;
-    }
-
-    .development-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .development-card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 10px;
-      border-left: 4px solid #2f7d32;
-      box-shadow: 0 4px 15px rgba(0,0,0,.05);
-    }
-
-    .development-card h3 {
-      font-family: Georgia, serif;
-      margin-bottom: 10px;
-      color: #111;
-    }
-
-    .development-card p {
-      color: #555;
-    }
-
-    .dark-section {
-      background: #111;
-      color: #fff;
-      max-width: none;
-    }
-
-    .dark-inner {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .dark-section .section-title h2 {
-      color: #d4af37;
-    }
-
-    .dark-section .section-title p {
-      color: #ddd;
-    }
-
-    .approach-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .approach-card {
-      background: #1c1c1c;
-      border: 1px solid #333;
-      border-top: 4px solid #d4af37;
-      padding: 28px;
-      border-radius: 10px;
-    }
-
-    .approach-card h3 {
-      color: #d4af37;
-      font-family: Georgia, serif;
-      margin-bottom: 10px;
-    }
-
-    .approach-card p {
-      color: #ddd;
-    }
-
-    .future {
-      background: linear-gradient(135deg, #111, #222);
-      color: #fff;
-      padding: 45px 30px;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .future h2 {
-      color: #d4af37;
-      font-family: Georgia, serif;
-      margin-bottom: 15px;
-    }
-
-    .future p {
-      max-width: 850px;
-      margin: auto;
-      color: #eee;
-    }
-
-    .cta {
-      text-align: center;
-      padding-top: 35px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin: 7px;
-      padding: 12px 22px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: .3s;
-    }
-
-    .btn-gold {
-      background: #d4af37;
-      color: #000;
-    }
-
-    .btn-green {
-      background: #2f7d32;
-      color: #fff;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      opacity: .9;
-    }
-
-    footer {
-      background: #000;
-      color: #ccc;
-      text-align: center;
-      padding: 30px 20px;
-      border-top: 3px solid #d4af37;
-    }
-
-    footer strong {
-      color: #d4af37;
-    }
-
-    footer a {
-      color: #d4af37;
-      text-decoration: none;
-    }
-
-    @media (max-width: 850px) {
-
-      .nav-container {
-        flex-direction: column;
-      }
-
-      nav {
-        width: 100%;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .project-grid,
-      .development-grid,
-      .approach-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 500px) {
-
-      .hero {
-        padding: 55px 15px;
-      }
-
-      .hero h1 {
-        font-size: 29px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      section {
-        padding: 45px 15px;
-      }
-
-      nav a {
-        font-size: 13px;
-        padding: 7px 8px;
-      }
+    @media(max-width:600px){
+      .nav-wrap{padding:12px 14px}
+      .brand{font-size:18px}
+      nav a{font-size:13px;padding:7px 8px}
+      .hero{min-height:65vh;padding-top:70px}
+      .hero-logo{width:95px;height:95px}
+      .hero p{font-size:17px}
+      .section{padding:60px 17px}
+      .cards{grid-template-columns:1fr}
+      .card{padding:23px}
+      .cta{padding:38px 20px}
     }
   </style>
 </head>
 
 <body>
-
-<header>
-
-  <div class="nav-container">
-
-    <a href="index.html" class="brand">
-      Mt Zion <span>Gospel Music Association</span>
-    </a>
-
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="music.html">Music</a>
-      <a href="ministry.html">Ministry</a>
-      <a href="events.html">Events</a>
-      <a href="projects.html" class="active">Projects</a>
-      <a href="support.html">Support</a>
-      <a href="social.html">Connect</a>
-      <a href="contact.html">Contact</a>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">Mt Zion <span>Gospel Music Association</span></a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="music.html">Music</a></li>
+        <li><a href="ministry.html">Ministry</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="social.html">Connect</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-
   </div>
-
 </header>
 
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <img src="./logo.png" alt="Mt Zion Gospel Music Association logo" class="hero-logo">
+      <div class="eyebrow">Our Projects</div>
+      <h1>Building Faith, Developing People</h1>
+      <p>Exploring future initiatives that connect gospel music, youth development, peace, practical community needs and positive opportunities.</p>
+      <div class="highlight">Music • Youth • Peace • Community • Development</div>
+    </div>
+  </section>
 
-<section class="hero">
-
-  <img src="./logo.png"
-       alt="Mt Zion Gospel Music Association logo">
-
-  <h1>Our Projects</h1>
-
-  <p>
-    Building Faith, Developing People and Strengthening Communities
-  </p>
-
-  <p class="highlight">
-    Music • Youth • Peace • Community • Development
-  </p>
-
-</section>
-
-
-<section>
-
-  <div class="section-title">
-
-    <h2>Our Development Focus</h2>
-
-    <p>
-      Mt Zion Gospel Music Association seeks to develop projects that
-      connect gospel music and Christian values with youth development,
-      peace, community wellbeing and practical support.
-    </p>
-
-  </div>
-
-
-  <div class="intro">
-
-    <p>
-      Our projects are being developed around the belief that meaningful
-      community development begins with people. We want to encourage
-      children and young people from an early age, strengthen families,
-      promote peaceful relationships and identify practical ways to
-      support communities.
-    </p>
-
-    <p>
-      Some initiatives may begin as small community activities and grow
-      over time as partnerships, resources and opportunities become
-      available.
-    </p>
-
-  </div>
-
-</section>
-
-
-<section>
-
-  <div class="section-title">
-
-    <h2>Priority Project Areas</h2>
-
-    <p>
-      These are key areas where Mt Zion intends to develop future
-      programs and community initiatives.
-    </p>
-
-  </div>
-
-
-  <div class="project-grid">
-
-
-    <div class="project-card">
-
-      <h3>🎵 Gospel Music & Ministry</h3>
-
-      <p>
-        Development of gospel music, worship and ministry activities that
-        proclaim the Good News, encourage faith and provide opportunities
-        for musical creativity and talent development.
-      </p>
-
-      <span class="status">Future Development</span>
-
+  <section class="section">
+    <div class="heading">
+      <h2>Project Development</h2>
+      <p>Mt Zion Gospel Music Association is developing project priorities that reflect its vision, mission and commitment to communities.</p>
     </div>
 
-
-    <div class="project-card">
-
-      <h3>👧 Childhood & Youth Development</h3>
-
-      <p>
-        Initiatives designed to encourage children and young people from
-        childhood through adolescence by developing character, confidence,
-        faith, talents, respect and positive life values.
-      </p>
-
-      <span class="status">Future Development</span>
-
+    <div class="notice">
+      <h3>Future Project Areas</h3>
+      <p>The areas below represent priorities for future development. Specific projects, budgets, partners, locations and implementation dates will be confirmed as plans develop.</p>
     </div>
 
-
-    <div class="project-card">
-
-      <h3>🌱 Youth Skills & Opportunities</h3>
-
-      <p>
-        Future initiatives may encourage young people to discover their
-        abilities, develop useful skills and pursue positive opportunities
-        that can help them contribute to their families and communities.
-      </p>
-
-      <span class="status">Future Development</span>
-
+    <div class="cards">
+      <article class="card"><h3>Gospel Music & Ministry</h3><p>Developing music and ministry activities that proclaim the Good News, encourage faith and create positive opportunities.</p></article>
+      <article class="card"><h3>Children & Youth Development</h3><p>Supporting positive development, creativity, character and opportunities for children and young people.</p></article>
+      <article class="card"><h3>Youth Skills & Opportunities</h3><p>Exploring practical ways to connect young people with skills, creativity, mentorship and constructive opportunities.</p></article>
+      <article class="card"><h3>Peace & Reconciliation</h3><p>Developing activities that encourage peace, reconciliation, unity, respect and stronger community relationships.</p></article>
+      <article class="card"><h3>Water & Community Development</h3><p>Recognizing practical community priorities, including safe water and other needs identified through responsible planning.</p></article>
+      <article class="card"><h3>Support for Marginalized People</h3><p>Exploring compassionate and inclusive initiatives that support dignity, participation and positive community wellbeing.</p></article>
     </div>
+  </section>
 
-
-    <div class="project-card">
-
-      <h3>🕊️ Peace & Reconciliation</h3>
-
-      <p>
-        Community-based activities that use gospel music, Christian
-        values, dialogue and positive engagement to encourage peace,
-        forgiveness, reconciliation, respect and unity.
-      </p>
-
-      <span class="status">Future Development</span>
-
-    </div>
-
-
-    <div class="project-card">
-
-      <h3>💧 Water & Community Development</h3>
-
-      <p>
-        Future community development initiatives may include supporting
-        practical needs such as access to safe water and other priorities
-        identified within communities.
-      </p>
-
-      <span class="status">Future Development</span>
-
-    </div>
-
-
-    <div class="project-card">
-
-      <h3>🤝 Support for Marginalized People</h3>
-
-      <p>
-        Initiatives intended to encourage inclusion, dignity and support
-        for people and families who are marginalized, vulnerable or
-        experiencing difficult circumstances.
-      </p>
-
-      <span class="status">Future Development</span>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="green-section">
-
-  <div class="green-inner">
-
-    <div class="section-title">
-
-      <h2>Community Development Priorities</h2>
-
-      <p>
-        Our development approach is people-centred and focused on
-        practical, positive and sustainable community outcomes.
-      </p>
-
-    </div>
-
-
-    <div class="development-grid">
-
-
-      <div class="development-card">
-
-        <h3>Children & Young People</h3>
-
-        <p>
-          Encourage positive development from childhood through
-          adolescence and help young people discover their potential.
-        </p>
-
+  <section class="section alt">
+    <div class="inner">
+      <div class="heading">
+        <h2>Community Development Priorities</h2>
+        <p>Our future project planning will consider the needs of people, families and communities.</p>
       </div>
 
-
-      <div class="development-card">
-
-        <h3>Families</h3>
-
-        <p>
-          Encourage values, responsibility, respect and positive
-          opportunities that strengthen families.
-        </p>
-
+      <div class="cards">
+        <article class="card"><h3>Children & Young People</h3><p>Encouraging safe, positive and constructive opportunities for the next generation.</p></article>
+        <article class="card"><h3>Families</h3><p>Supporting activities that contribute to stronger families and positive futures.</p></article>
+        <article class="card"><h3>Peaceful Communities</h3><p>Promoting reconciliation, unity, respect and peaceful relationships.</p></article>
+        <article class="card"><h3>Practical Needs</h3><p>Considering practical priorities that can contribute to community wellbeing and development.</p></article>
+        <article class="card"><h3>Inclusion</h3><p>Promoting dignity and participation for people from different backgrounds and circumstances.</p></article>
+        <article class="card"><h3>Positive Opportunities</h3><p>Creating pathways for people to use their gifts, skills and creativity constructively.</p></article>
       </div>
-
-
-      <div class="development-card">
-
-        <h3>Peaceful Communities</h3>
-
-        <p>
-          Encourage reconciliation, respect, forgiveness, dialogue and
-          unity among people and communities.
-        </p>
-
-      </div>
-
-
-      <div class="development-card">
-
-        <h3>Practical Needs</h3>
-
-        <p>
-          Identify community priorities such as safe water and other
-          essential development needs.
-        </p>
-
-      </div>
-
-
-      <div class="development-card">
-
-        <h3>Inclusion</h3>
-
-        <p>
-          Seek ways to support marginalized and vulnerable people and
-          encourage their participation in community life.
-        </p>
-
-      </div>
-
-
-      <div class="development-card">
-
-        <h3>Positive Opportunities</h3>
-
-        <p>
-          Encourage constructive pathways through music, creativity,
-          skills, mentorship, service and community participation.
-        </p>
-
-      </div>
-
     </div>
+  </section>
 
-  </div>
-
-</section>
-
-
-<section class="dark-section">
-
-  <div class="dark-inner">
-
-    <div class="section-title">
-
+  <section class="section">
+    <div class="heading">
       <h2>Our Project Approach</h2>
-
-      <p>
-        We want every project to be purposeful, responsible and focused
-        on the needs of the people it is intended to serve.
-      </p>
-
+      <p>Future projects will be developed carefully, with clear objectives and responsible planning.</p>
     </div>
 
-
-    <div class="approach-grid">
-
-
-      <div class="approach-card">
-
-        <h3>1. Identify Needs</h3>
-
-        <p>
-          Listen to communities and identify genuine needs, opportunities
-          and priorities.
-        </p>
-
-      </div>
-
-
-      <div class="approach-card">
-
-        <h3>2. Build Partnerships</h3>
-
-        <p>
-          Seek cooperation with churches, communities, families,
-          organizations and other appropriate partners.
-        </p>
-
-      </div>
-
-
-      <div class="approach-card">
-
-        <h3>3. Develop Solutions</h3>
-
-        <p>
-          Work toward practical initiatives that encourage positive,
-          responsible and sustainable development.
-        </p>
-
-      </div>
-
+    <div class="approach">
+      <article class="step">
+        <div class="number">1</div>
+        <h3>Identify Needs</h3>
+        <p>Listen to communities and identify meaningful priorities and opportunities.</p>
+      </article>
+      <article class="step">
+        <div class="number">2</div>
+        <h3>Build Partnerships</h3>
+        <p>Explore appropriate partnerships, resources and community participation.</p>
+      </article>
+      <article class="step">
+        <div class="number">3</div>
+        <h3>Develop Solutions</h3>
+        <p>Plan practical initiatives with clear goals, responsibilities and sustainable direction.</p>
+      </article>
     </div>
+  </section>
 
-  </div>
-
-</section>
-
-
-<section>
-
-  <div class="future">
-
-    <h2>Growing the Vision</h2>
-
-    <p>
-      Mt Zion Gospel Music Association is developing a long-term vision
-      where gospel music and community development work together to
-      strengthen faith, encourage young people, promote peace and
-      reconciliation, support families, assist marginalized people and
-      contribute to healthier communities.
-    </p>
-
-  </div>
-
-
-  <div class="cta">
-
-    <a href="about.html" class="btn btn-gold">
-      Learn About Us
-    </a>
-
-    <a href="support.html" class="btn btn-green">
-      Support Our Vision
-    </a>
-
-    <a href="contact.html" class="btn btn-gold">
-      Contact Mt Zion
-    </a>
-
-  </div>
-
-</section>
-
+  <section class="section alt">
+    <div class="inner">
+      <div class="cta">
+        <h2>Future Development</h2>
+        <p>As Mt Zion Gospel Music Association grows, confirmed projects and opportunities will be communicated through our official channels.</p>
+        <div class="buttons">
+          <a class="button" href="ministry.html">Explore Our Ministry</a>
+          <a class="button green" href="support.html">Support Our Vision</a>
+          <a class="button" href="social.html">Connect With Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>
-
-  <p>
-    <strong>Mt Zion Gospel Music Association</strong>
-  </p>
-
-  <p>
-    Proclaiming the Good News Through Gospel Music
-  </p>
-
-  <p style="margin-top:10px;">
-    Email:
-    <a href="mailto:mtziongospelmusicassociation@gmail.com">
-      mtziongospelmusicassociation@gmail.com
-    </a>
-  </p>
-
-  <p style="margin-top:15px;">
-    © 2026 Mt Zion Gospel Music Association. All rights reserved.
-  </p>
-
+  <p><strong>Mt Zion Gospel Music Association</strong></p>
+  <p>Proclaiming the Good News Through Gospel Music</p>
+  <p><a href="mailto:mtziongospelmusicassociation@gmail.com">mtziongospelmusicassociation@gmail.com</a></p>
 </footer>
-
 </body>
 </html>
