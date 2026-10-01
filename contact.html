@@ -79,12 +79,18 @@
     }
 
     .hero {
-      padding: 80px 22px 70px;
-      text-align: center;
-      background:
-        radial-gradient(circle at top, rgba(212, 175, 55, 0.12), transparent 42%),
-        linear-gradient(180deg, #101010 0%, #050505 100%);
-    }
+  padding: 80px 22px 70px;
+  text-align: center;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.72)),
+    url("./hero-background.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #101010;
+}
 
     .hero-logo {
       width: 115px;
