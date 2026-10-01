@@ -15,11 +15,15 @@
   <meta name="author"
         content="Mt Zion Gospel Music Association">
 
-  <title>Mt Zion Gospel Music Association</title>
+  <title>Home | Mt Zion Gospel Music Association</title>
 
   <link rel="icon" type="image/png" href="./logo.png">
 
   <style>
+
+    /* ==============================
+       RESET & GLOBAL
+    ============================== */
 
     * {
       margin: 0;
@@ -38,36 +42,49 @@
       line-height: 1.7;
     }
 
-    /* HEADER */
+    a {
+      transition: all 0.3s ease;
+    }
+
+    /* ==============================
+       HEADER
+    ============================== */
 
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: #000;
-      border-bottom: 3px solid #d4af37;
+      background: rgba(0, 0, 0, 0.97);
+      border-bottom: 2px solid #d4af37;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
     }
 
     .nav-container {
       max-width: 1200px;
       margin: auto;
-      padding: 14px 25px;
+      padding: 15px 25px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 25px;
     }
 
     .brand {
       color: #fff;
       text-decoration: none;
-      font-family: Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 21px;
       font-weight: bold;
       white-space: nowrap;
+      letter-spacing: 0.2px;
     }
 
     .brand span {
+      color: #d4af37;
+    }
+
+    .brand:hover {
       color: #d4af37;
     }
 
@@ -75,7 +92,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 16px;
+      gap: 8px;
     }
 
     nav a {
@@ -83,80 +100,125 @@
       text-decoration: none;
       font-size: 14px;
       font-weight: bold;
-      transition: 0.3s;
+      padding: 7px 9px;
+      border-radius: 5px;
     }
 
-    nav a:hover {
-      color: #d4af37;
+    nav a:hover,
+    nav a.active {
+      color: #000;
+      background: #d4af37;
     }
 
-    /* HERO */
+    /* ==============================
+       HERO
+    ============================== */
 
     .hero {
       background:
-        linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)),
-        url("./logo.png") center/contain no-repeat;
-      background-color: #050505;
+        linear-gradient(
+          rgba(0, 0, 0, 0.82),
+          rgba(0, 0, 0, 0.82)
+        ),
+        #050505;
+
       color: #fff;
       text-align: center;
-      padding: 85px 20px;
+      padding: 95px 20px 90px;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border: 1px solid rgba(212, 175, 55, 0.16);
+      border-radius: 50%;
+      top: -220px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 950px;
+      margin: auto;
     }
 
     .hero img {
-      width: 150px;
-      max-width: 80%;
+      width: 155px;
+      max-width: 70%;
       margin-bottom: 25px;
+      filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.5));
     }
 
     .hero h1 {
-      font-family: Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif;
       color: #d4af37;
-      font-size: 44px;
-      margin-bottom: 12px;
+      font-size: 46px;
+      line-height: 1.2;
+      margin-bottom: 16px;
     }
 
     .hero p {
       max-width: 800px;
       margin: auto;
       font-size: 20px;
+      color: #f4f4f4;
     }
 
     .hero-highlight {
-      margin-top: 25px;
-      color: #fff;
+      margin-top: 22px !important;
+      color: #fff !important;
       font-weight: bold;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
+      font-size: 16px !important;
     }
 
-    /* GENERAL SECTIONS */
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .hero-button {
+      display: inline-block;
+      padding: 13px 25px;
+      border-radius: 6px;
+      background: #d4af37;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero-button:hover {
+      background: #fff;
+      transform: translateY(-2px);
+    }
+
+    .hero-button.secondary {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #d4af37;
+    }
+
+    .hero-button.secondary:hover {
+      background: #d4af37;
+      color: #000;
+    }
+
+    /* ==============================
+       GENERAL SECTIONS
+    ============================== */
 
     section {
-      padding: 70px 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      font-family: Georgia, serif;
-      font-size: 34px;
-      color: #111;
-      margin-bottom: 15px;
-    }
-
-    .section-title::after {
-      content: "";
-      display: block;
-      width: 70px;
-      height: 3px;
-      background: #d4af37;
-      margin: 12px auto 25px;
-    }
-
-    .section-intro {
-      max-width: 850px;
-      margin: 0 auto 40px;
-      text-align: center;
-      color: #555;
-      font-size: 17px;
+      padding: 75px 20px;
     }
 
     .container {
@@ -164,7 +226,35 @@
       margin: auto;
     }
 
-    /* WELCOME */
+    .section-title {
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      color: #111;
+      margin-bottom: 15px;
+      line-height: 1.25;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 65px;
+      height: 3px;
+      background: #d4af37;
+      margin: 13px auto 25px;
+    }
+
+    .section-intro {
+      max-width: 850px;
+      margin: 0 auto 42px;
+      text-align: center;
+      color: #555;
+      font-size: 17px;
+    }
+
+    /* ==============================
+       WELCOME
+    ============================== */
 
     .welcome {
       background: #fff;
@@ -182,39 +272,48 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
-      margin-top: 40px;
+      margin-top: 42px;
     }
 
     .card {
-      background: #f8f8f8;
-      border: 1px solid #ddd;
+      background: #fff;
+      border: 1px solid #e1e1e1;
       border-top: 4px solid #d4af37;
       border-radius: 10px;
-      padding: 30px 25px;
+      padding: 32px 26px;
       text-align: center;
-      transition: 0.3s;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
     }
 
     .card h3 {
       color: #111;
-      font-family: Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 23px;
       margin-bottom: 12px;
     }
 
     .card p {
       color: #555;
+      font-size: 16px;
     }
 
-    /* VISION & MISSION */
+    /* ==============================
+       VISION & MISSION
+    ============================== */
 
     .vision-mission {
-      background: #0a0a0a;
+      background:
+        linear-gradient(
+          135deg,
+          #080808,
+          #151515
+        );
       color: #fff;
     }
 
@@ -235,28 +334,29 @@
     }
 
     .vm-box {
-      background: #111;
+      background: rgba(255, 255, 255, 0.035);
       border: 1px solid #333;
       border-top: 4px solid #d4af37;
       border-radius: 10px;
-      padding: 35px 30px;
+      padding: 38px 32px;
       text-align: center;
-      transition: 0.3s;
+      transition: all 0.3s ease;
     }
 
     .vm-box:hover {
       transform: translateY(-5px);
       border-color: #d4af37;
+      background: rgba(255, 255, 255, 0.055);
     }
 
     .vm-icon {
-      font-size: 42px;
-      margin-bottom: 15px;
+      font-size: 40px;
+      margin-bottom: 13px;
     }
 
     .vm-box h3 {
       color: #d4af37;
-      font-family: Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 28px;
       margin-bottom: 18px;
     }
@@ -264,10 +364,12 @@
     .vm-box p {
       color: #ddd;
       font-size: 17px;
-      line-height: 1.8;
+      line-height: 1.85;
     }
 
-    /* CORE VALUES */
+    /* ==============================
+       CORE VALUES
+    ============================== */
 
     .values {
       background: #f6f6f6;
@@ -285,14 +387,22 @@
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 10px;
-      padding: 25px 18px;
+      padding: 28px 20px;
       text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+    }
+
+    .value:hover {
+      transform: translateY(-4px);
+      border-color: #d4af37;
     }
 
     .value h3 {
       color: #111;
-      font-family: Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif;
       margin-bottom: 10px;
+      font-size: 21px;
     }
 
     .value p {
@@ -300,7 +410,9 @@
       font-size: 15px;
     }
 
-    /* FEATURED MUSIC */
+    /* ==============================
+       FEATURED MUSIC
+    ============================== */
 
     .music {
       background: #fff;
@@ -315,7 +427,8 @@
       height: 0;
       overflow: hidden;
       border-radius: 12px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+      background: #000;
     }
 
     .video-wrapper iframe {
@@ -329,22 +442,26 @@
 
     .channel-button {
       display: inline-block;
-      margin-top: 25px;
-      padding: 12px 25px;
+      margin-top: 27px;
+      padding: 13px 26px;
       background: #000;
       color: #fff;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
-      transition: 0.3s;
+      border: 1px solid #000;
     }
 
     .channel-button:hover {
       background: #d4af37;
+      border-color: #d4af37;
       color: #000;
+      transform: translateY(-2px);
     }
 
-    /* COMMUNITY */
+    /* ==============================
+       COMMUNITY
+    ============================== */
 
     .community {
       background: #f6f6f6;
@@ -356,22 +473,34 @@
       text-align: center;
       background: #fff;
       border-left: 5px solid #2e7d32;
-      padding: 35px;
+      padding: 38px;
       border-radius: 8px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.06);
     }
 
     .community-box h3 {
       color: #2e7d32;
-      font-family: Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 27px;
       margin-bottom: 15px;
     }
 
-    /* CONNECT */
+    .community-box p {
+      color: #555;
+      font-size: 17px;
+    }
+
+    /* ==============================
+       CONNECT
+    ============================== */
 
     .connect {
-      background: #111;
+      background:
+        linear-gradient(
+          135deg,
+          #0b0b0b,
+          #171717
+        );
       color: #fff;
       text-align: center;
     }
@@ -388,47 +517,59 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 13px;
       margin-top: 30px;
     }
 
     .connect-buttons a {
       display: inline-block;
-      padding: 13px 24px;
+      padding: 13px 23px;
       background: #d4af37;
       color: #000;
       text-decoration: none;
       font-weight: bold;
       border-radius: 6px;
-      transition: 0.3s;
+      border: 1px solid #d4af37;
     }
 
     .connect-buttons a:hover {
       background: #fff;
+      border-color: #fff;
+      transform: translateY(-2px);
     }
 
-    .support-button {
-      background: #2e7d32 !important;
-      color: #fff !important;
+    .connect-buttons .support-button {
+      background: #2e7d32;
+      border-color: #2e7d32;
+      color: #fff;
     }
 
-    .support-button:hover {
-      background: #fff !important;
-      color: #000 !important;
+    .connect-buttons .support-button:hover {
+      background: #fff;
+      border-color: #fff;
+      color: #000;
     }
 
-    /* FOOTER */
+    /* ==============================
+       FOOTER
+    ============================== */
 
     footer {
       background: #000;
-      color: #aaa;
+      color: #999;
       text-align: center;
-      padding: 30px 20px;
-      border-top: 3px solid #d4af37;
+      padding: 32px 20px;
+      border-top: 2px solid #d4af37;
+    }
+
+    footer p {
+      margin: 6px 0;
     }
 
     footer strong {
       color: #d4af37;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
     }
 
     footer a {
@@ -436,39 +577,84 @@
       text-decoration: none;
     }
 
-    /* RESPONSIVE */
+    footer a:hover {
+      color: #fff;
+    }
 
-    @media (max-width: 900px) {
+    /* ==============================
+       ACCESSIBILITY
+    ============================== */
+
+    a:focus-visible {
+      outline: 3px solid #d4af37;
+      outline-offset: 3px;
+    }
+
+    /* ==============================
+       RESPONSIVE
+    ============================== */
+
+    @media (max-width: 1000px) {
 
       .nav-container {
         flex-direction: column;
+        gap: 12px;
       }
 
       nav {
-        gap: 10px;
-      }
-
-      .hero h1 {
-        font-size: 35px;
+        gap: 5px;
       }
 
       .cards {
         grid-template-columns: 1fr;
       }
 
+      .value-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 750px) {
+
+      .hero {
+        padding: 75px 18px 70px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
       .vm-grid {
         grid-template-columns: 1fr;
       }
 
-      .value-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .nav-container {
+        padding: 13px 15px;
       }
+
+      .brand {
+        font-size: 19px;
+      }
+
     }
 
     @media (max-width: 600px) {
 
+      section {
+        padding: 60px 18px;
+      }
+
       .hero {
-        padding: 65px 18px;
+        padding: 65px 18px 60px;
+      }
+
+      .hero img {
+        width: 130px;
       }
 
       .hero h1 {
@@ -479,8 +665,26 @@
         font-size: 17px;
       }
 
+      .hero-highlight {
+        font-size: 14px !important;
+        letter-spacing: 0.8px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-button {
+        width: min(280px, 100%);
+      }
+
       .section-title {
         font-size: 29px;
+      }
+
+      .section-intro {
+        font-size: 16px;
       }
 
       .value-grid {
@@ -491,13 +695,32 @@
         padding: 30px 20px;
       }
 
+      .vm-box p {
+        font-size: 16px;
+      }
+
       .community-box {
-        padding: 25px 20px;
+        padding: 28px 20px;
+      }
+
+      nav {
+        gap: 3px;
       }
 
       nav a {
-        font-size: 13px;
+        font-size: 12px;
+        padding: 6px 7px;
       }
+
+      .connect-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .connect-buttons a {
+        width: min(280px, 100%);
+      }
+
     }
 
   </style>
@@ -515,9 +738,9 @@
         Mt Zion <span>Gospel Music Association</span>
       </a>
 
-      <nav>
+      <nav aria-label="Main navigation">
 
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active" aria-current="page">Home</a>
         <a href="about.html">About</a>
         <a href="music.html">Music</a>
         <a href="ministry.html">Ministry</a>
@@ -538,17 +761,35 @@
 
   <section class="hero">
 
-    <img src="./logo.png" alt="Mt Zion Gospel Music Association Logo">
+    <div class="hero-content">
 
-    <h1>Mt Zion Gospel Music Association</h1>
+      <img
+        src="./logo.png"
+        alt="Mt Zion Gospel Music Association Logo">
 
-    <p>
-      Proclaiming the Good News Through Gospel Music.
-    </p>
+      <h1>Mt Zion Gospel Music Association</h1>
 
-    <p class="hero-highlight">
-      Faith • Music • Ministry • Unity • Hope
-    </p>
+      <p>
+        Proclaiming the Good News Through Gospel Music.
+      </p>
+
+      <p class="hero-highlight">
+        Faith • Music • Ministry • Unity • Hope
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="about.html" class="hero-button">
+          Discover Mt Zion
+        </a>
+
+        <a href="music.html" class="hero-button secondary">
+          Explore Our Music
+        </a>
+
+      </div>
+
+    </div>
 
   </section>
 
@@ -635,7 +876,7 @@
 
         <div class="vm-box">
 
-          <div class="vm-icon">🌟</div>
+          <div class="vm-icon" aria-hidden="true">🌟</div>
 
           <h3>Our Vision</h3>
 
@@ -651,7 +892,7 @@
 
         <div class="vm-box">
 
-          <div class="vm-icon">🙏</div>
+          <div class="vm-icon" aria-hidden="true">🙏</div>
 
           <h3>Our Mission</h3>
 
@@ -764,7 +1005,8 @@
 
         <iframe
           src="https://www.youtube.com/embed/f0zcKgd0fRE"
-          title="Mt Zion Gospel Music Association"
+          title="Mt Zion Gospel Music Association featured gospel music"
+          loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen>
         </iframe>
@@ -853,8 +1095,7 @@
         </a>
 
 
-        <a
-          href="social.html">
+        <a href="social.html">
           Connect Page
         </a>
 
