@@ -92,17 +92,21 @@
       background:rgba(212,175,55,.09);
     }
 
-    .hero{
-      min-height:72vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:90px 22px 70px;
-      background:
-        radial-gradient(circle at 50% 20%,rgba(212,175,55,.13),transparent 38%),
-        linear-gradient(180deg,#111 0%,#050505 100%);
-    }
+   .hero{
+  min-height:72vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:90px 22px 70px;
+  background-image:
+    linear-gradient(rgba(0,0,0,.60),rgba(0,0,0,.72)),
+    url("./hero-background.png");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-color:#101010;
+}
 
     .hero-inner{max-width:900px}
 
